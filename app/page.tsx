@@ -1,103 +1,172 @@
-import Image from "next/image";
+import Timeline from './components/Timeline';
+import NewsletterSignup from './components/NewsletterSignup';
+import DesignChallenge from './components/DesignChallenge';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-32">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+            The Future of Civil Engineering
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            Exploring how automation will transform the civil engineering industry over the next two decades
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Future Predictions Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">
+            The Next 20 Years in Civil Engineering
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-2xl font-bold mb-6 text-blue-600">2024-2030</h3>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Advanced AI-powered design optimization and validation, reducing design time by 60%</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Widespread adoption of autonomous construction equipment for earthwork and material handling</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Real-time project monitoring using IoT sensors and digital twins for predictive maintenance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Automated quality control using computer vision and AI inspection systems</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-2xl font-bold mb-6 text-blue-600">2030-2040</h3>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Fully automated construction sites with 80% reduction in manual labor requirements</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Self-repairing infrastructure using smart materials and nano-technology</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>AI-driven urban planning with real-time adaptation to population needs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Complete integration of robotics in construction processes with human oversight</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Detailed Work Evolution Section */}
+          <div className="bg-white p-8 rounded-lg shadow-lg mt-12">
+            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800">
+              Evolution of Civil Engineering Work
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-blue-600 mb-4">Project Planning & Design</h4>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Engineers will focus on creative problem-solving while AI handles repetitive calculations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Virtual reality design reviews become standard practice</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Automated code compliance and optimization</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-blue-600 mb-4">Site Management</h4>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Remote site management through digital twins and IoT</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>AI-powered resource allocation and scheduling</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Drone and robot fleet management becomes key skill</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-semibold text-blue-600 mb-4">Skills & Expertise</h4>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Hybrid roles combining engineering with data science</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Focus shifts to systems integration and oversight</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">→</span>
+                    <span>Increased emphasis on sustainable and smart materials</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Challenge Game Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Experience the Future of Engineering
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Try our interactive challenge where you can solve real engineering problems with AI assistance, just like future civil engineers will do!
+            </p>
+          </div>
+          <DesignChallenge />
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="bg-white py-16">
+        <Timeline />
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <NewsletterSignup />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <p>© 2024 Civil Engineering Automation Insights. All rights reserved.</p>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
